@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>mytravelblog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/static/base.css">
+    </head>
+
+  <body>
+
+    <nav>
+      <div class="moblogo">
+         <a href="{% url 'home' %}"><img id="logoimage" src="/static/logo.png" alt=""></a>
+       </div>
+      <ul class="nav-links">
+        <li></li>
+        <li></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'articles' %}">Articles</a></li>
+        <li><a href="{% url 'destinations' %}">Destinations</a>
+          <ul>
+            <li>  <div class="row">
+              <div class="columnimage">
+                <a href="#"><img id="bigdropimage" src="/static/DSC_0195.JPG" alt="nfjd"></a>
+              </div>
+              <div class="columnimage">
+                <a href="#"><img id="bigdropimage" src="/static/DSC_0242.JPG" alt=""></a>
+              </div>
+              <div class="columnimage">
+                <a href="#"><img id="bigdropimage" src="/static/G0511957.JPG" alt=""></a>
+              </div>
+              <div class="column">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <a href="#">Africa</a>
+                <a href="#">Asia</a>
+                <a href="#">Europe</a>
+                <a href="#">North America</a>
+                <a href="#">South America</a>
+                <a href="#">Oceania</a>
+                <a href="#">Antarctica</a>
+
+              </div>
+              <div class="column">
+                <h3>Explore</h3>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+              <!-- <div class="column">
+                <h3>Category 2</h3>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+              <div class="column">
+                <h3>Category 3</h3>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div> -->
+            </div>
+          </li>
+          </ul>
+        </li>
+
+        <hr>
+        <li><a href="{% url 'gallery' %}">Media</a>
+          <ul>
+            <li>  <div class="row">
+              <!-- <div class="columnimage">
+                <a href="#"><img id="bigdropimage" src="/static/biglaggon.jpg" alt=""></a>
+              </div>
+              <div class="columnimage">
+                <a href="#"><img id="bigdropimage" src="/static/biglaggon.jpg" alt=""></a>
+              </div>
+              <div class="columnimage">
+                <a href="#"><img id="bigdropimage" src="/static/biglaggon.jpg" alt=""></a>
+              </div>
+              <div class="column">
+                <img src="/open-iconic/svg/compass.svg">
+                <a href="#">lalalal</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+              <div class="column">
+                <h3>Cate</h3>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div> -->
+              <!-- <div class="column">
+                <h3>Category 2</h3>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+              <div class="column">
+                <h3>Category 3</h3>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div> -->
+            </div>
+          </ul>
+        </li>
+        <li><a class="cool-link" href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li></li>
+        <li></li>
+
+
+
+
+
+      </ul>
+      <div class="logo">
+         <a href="{% url 'home' %}"><img id="logoimage" src="/static/logo.png" alt=""></a>
+       </div>
+
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+
+    </nav>
+
+
+
+      <div id="icon-bar">
+
+
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-youtube"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-pinterest"></a>
+          <a href="#" class="fa fa-rss"></a>
+
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+
+
+
+
+
+
+
+    <script src="/static/myscript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/static/myscript.js"></script>
+  </body>
+</html>

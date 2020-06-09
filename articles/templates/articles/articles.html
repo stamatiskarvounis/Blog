@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+    {% block content %}
+
+
+        <!-- <div class="animation-area">
+          <ul class="box-area">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+          </ul> -->
+
+          <br>
+          <br>
+          <br>
+          <div class="container">
+            <div class="gallery">
+              {% for articles in articles.all %}
+              <div class="container2">
+                  <a class="gallery-item" href="{% url 'blog' %}"><img src="{{articles.image.url}}" alt=""><span class="text-wrapper"><span class="name">{{articles.title}}</span><span class="title">Read story</span></span></a></li>
+                  <a id="linkblog" href="#"><p class="text">{{articles.title}} </p></a>
+                  <p class="text2">Published: {{articles.pub_date}}</p>
+
+              </div>
+              {% endfor %}
+
+            </div>
+
+
+          </div>
+        <!-- </div> -->
+    {% endblock %}
