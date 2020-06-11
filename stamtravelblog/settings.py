@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'gallery.apps.GalleryConfig',
+    'widget_tweaks',
     'crispy_forms',
     'contact.apps.ContactConfig',
     'destinations.apps.DestinationsConfig',
