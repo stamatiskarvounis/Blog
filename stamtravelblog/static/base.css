@@ -1,5 +1,6 @@
 body{
   overflow-y: scroll; /* Add the ability to scroll */
+  font-family: monaco,Consolas,Lucida Console,monospace;
 
 }
 body::-webkit-scrollbar {
@@ -81,6 +82,7 @@ nav{
   list-style: none;
   text-transform: uppercase;
   font-size: 15px;
+  font-weight: bold;
   align-items:flex-end;
   margin-top: 10px;
   transition: 0.5s;
@@ -309,7 +311,6 @@ margin-top: 12px;
   }
 
   .container {
-    margin-left: 75px;
     padding-left:10px;
 
   }
@@ -319,6 +320,16 @@ margin-top: 12px;
     background-color: black;
     padding: 12px;
     margin-left: 50px;
+  }
+
+  #smnavbar{
+
+    display: none;
+
+  }
+  #icon-bar {
+    display: none;
+
   }
 
 
@@ -718,43 +729,35 @@ text-decoration: none;
 /*ARTICLES*/
 
 .container {
-  max-width: 1125px;
-  margin-top: 5%;
+  max-width: 1280px;
+  margin-top: 3%;
 }
 
 .container2{
 
-  height: 370px;
+  height: 400px;
   color: black;
   padding: 0;
 
-  width: 350px;
+  width: 380px;
   position: relative;
+  margin-right: 2%;
 }
-.text{
-  display: block;
-  padding:10px;
-  top: 0;
-  background-color: black;
-  width: 330px;
-  margin-left: 5px;
-  color: white;
-}
+
 
 
 .text2{
   padding:0;
   top: 0;
-  margin-right: 15px;
   float: right;
   font-size: 13px;
 }
 
 #linkblog{
   text-decoration: none;
-  color: red;
-  background-color: black;
+  color: black;
   width: 100px;
+  text-align: right;
 }
 #linkblog:hover{
   color: grey;
@@ -767,7 +770,7 @@ text-decoration: none;
 }
 
 .gallery-item {
-  width: 330px;
+  width: 400x;
   height: 265px;
   margin: 5px;
   text-decoration: none;
@@ -776,21 +779,24 @@ text-decoration: none;
 
 .gallery-item img {
   position: absolute;
-  width: 330px;
+  width: 400px;
   height: 265px;
 }
 
 .text-wrapper {
   position: relative;
-  width: 330px;
+  width: 400px;
   height: 265px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:center;
   text-align: center;
   color: #fff;
   opacity: 0;
   text-decoration: none;
+  font-size: 14px;
+  font-style: normal;
+
 
 }
 
@@ -810,6 +816,8 @@ text-decoration: none;
 .contactList{
   width: auto;
   background-color: black;
+  height: 95vh;
+  border-top:  1px solid white;
 }
 .contact{
   text-align: center;
@@ -845,4 +853,125 @@ background-color: white;
 
 .blogimage{
   width:10%;
+}
+
+
+@media (max-width: 700px) {
+  .contactList {
+    width: 100%;
+    height: 135vh;
+  }
+
+}
+
+/*THANK YOU*/
+#thankyou{
+  margin-top: 20%;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+#returnhome{
+  margin-top: 20%;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+}
+@media (max-width: 700px) {
+  #thankyou {
+    font-size: 15px;
+    text-align: center;
+  }
+  #returnhome{
+    margin-top: 20%;
+    color: black;
+    text-align: center;
+    font-size: 13px;
+  }
+
+}
+
+
+
+
+
+/*GALLERY*/
+
+
+
+.imageGrid {
+  line-height: 0;
+  margin-top: 1px;
+  background-color: black;
+  margin-left: 1px solid black;
+
+}
+.imageGrid .tile {
+  width:32.95%;
+  min-height:20em;
+  display:inline-flex;
+  background-color: black;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+
+  color:#fff;
+  font-family:"Verdana",sans-serif;
+  text-shadow: 2px 2px 2px #000;
+  cursor: pointer;
+  cursor: hand;
+  border: 0px;
+}
+
+.imageGrid .tile:before {
+  content: '';
+  background-color: rgba(15,15,15,0.5);
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+}
+
+.imageGrid .tile:hover:before {
+  display: none;
+}
+
+.imageGrid .tile .textWrapper {
+  text-align: center;
+  vertical-align: middle;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: .75em;
+}
+
+.imageGrid .tile .textWrapper .content {
+  display: none;
+}
+
+.imageGrid .tile:hover .textWrapper .content {
+  display: block;
+}
+
+.imageGrid .tile:hover .textWrapper .content h2 {
+  margin: 0;
+}
+
+@media (max-width: 1000px) {
+  .imageGrid .tile {
+    width: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .imageGrid .tile {
+    width: 100%;
+  }
+
 }

@@ -17,7 +17,6 @@ urlpatterns = [
     path('blog/',articles.views.blog,name="blog"),
     path('about/',articles.views.about,name="about"),
     path('gallery/',gallery.views.gallery,name="gallery"),
-    path('<int:articles_id>',articles.views.articles,name="blog"),
 
 
 
