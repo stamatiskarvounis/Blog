@@ -148,3 +148,10 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'stamkarblog@gmail.com'
 EMAIL_HOST_PASSWORD = '85638563'
 EMAIL_PORT = 587
+
+
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
